@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제 | 회원가입</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/js.js"></script>
+</head>
+<body>
+    <!--[회원가입페이지]
+       입력 : 이름, 생년월일(8자), 휴대폰번호, 이메일, 비밀번호입력 / 확인, 약관동의
+       기능1 : 비밀번호 입력하고 확인 할 때의 일치여부    
+       기능2 : 필수 약관동의 체크여부 / 모든약관동의
+       기능3 : 비어있는 입력란 체크
+       기능4 : 반응형
+    -->
+    <div class="container">
+        <header class="header-pc">
+            <h1 class="logo"><a href="#">Just 결제</a></h1>
+            <div class="payment-nav">
+                <ul>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">상세페이지</a></li>
+                    <li><a href="#">기능페이지</a></li>
+                </ul>
+            </div>
+            <div class="payment-user">
+                <button type="button" onclick="location.href='sign-up.html'">회원가입</button>
+                <button type="button">로그인</button>
+            </div>
+        </header>
+        <!--모바일 네비게이션-->
+        <div class="head-mobile">
+            <div class="header-wrap">
+                <h1 class="logo"><a href="#">Just 결제</a></h1>
+            </div>
+            <div class="mobile-bur">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="mobile-container">
+                <div class="mobile-close">
+                    <span></span><span></span>
+                </div>
+                <h1 class="logom"><a href="#">Just 결제</a></h1>
+                <div class="paymentm-nav">
+                    <ul>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">상세페이지</a></li>
+                        <li><a href="#">기능페이지</a></li>
+                    </ul>
+                </div>
+                <div class="paymentm2-user">
+                    <button type="button" onclick="location.href='sign-up.html'">회원가입</button>
+                    <button type="button">로그인</button>
+                </div>
+            </div>
+            <div class="mobile-conBg"></div>
+        </div>
+
+
+        <div class="wrap-signUp">
+            <div class="innner-signUp">
+                <h1 class="title">어서오세요! 회원가입을 환영합니다:D</h1>
+                <div class="box-signUp">
+                    <div class="input-box" id="input_forme">
+                        <input type="email" placeholder="아이디(이메일 주소)">
+                        <input type="password" id="password1" placeholder="비밀번호 입력(!,@,#,$,%포함, 6글자 이상, 16글자 이하 )">
+                        <input type="password" id="password2" class="pwCheck" placeholder="비밀번호 확인">
+                        <span id="check"></span>
+                        <input type="text" placeholder="이름 (실명으로 입력해주세요)">
+                        <input type="text" placeholder="생년월일 8자리 (ex.1999.01.01)">
+                        <input type="tel" placeholder="휴대폰 번호 (ex.01012345678)">
+                    </div>
+                    <div>
+                        <div class="terms">
+                            <div class="terms_inner">
+                                <div class="checkAll-input term-inputBox">
+                                    <input type="checkbox" id="checkAll" name="checkAll">
+                                    <label for="checkAll">모든 약관 동의</label>
+                                </div>
+                                <div class="term_cont">
+                                    <span>아래 모든 약관(필수/선택 포함) 및 광고성 정보수신 동의 내용을 확인하고 동의합니다.</span>
+                                    <span>※선택 항목에 대한 동의를 거부하더라도 회원가입에 영향을 미치지 않습니다. <a href="#" class="link" id="link-modal">이용약관</a></span>
+                                    <div>
+                                        <input type="checkbox" id="agree1" name="agree1">
+                                        <label for="agree1">
+                                            <span class="bold">[필수]</span>
+                                            개인정보 수집 및 이용에 대한 동의
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="agree2" name="agree2">
+                                        <label for="agree2">
+                                            <span class="bold">[선택]</span>
+                                            마케팅 및 광고성 정보 수신에 대한 동의
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="choice1" name="choice1">
+                                        <label for="choice1">[선택] SNS(문자메시지) 수신동의</label> 
+                                    </div>
+                                    <div>    
+                                        <input type="checkbox" id="choice2" name="choice2">
+                                        <label for="choice2">[선택] E-MAIL 수신 동의</label> 
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" value="회원가입하기" onclick="javascript:agree();">회원가입 하기</button>
+                        </div>
+                    </div>
+                    <div class="modal-link">
+                        <div class="modal-linkbox">
+                            <div class="modal-this">
+                                <div class="modal-title">여기는 이용약관 ZONE <span>┾</span></div>
+                                <div class="modal-content">
+                                    <p>
+                                        그래, 물론 인생은 고난으로 가득해.<br>
+                                        하지만 요령은 순간에 주어진 몇 몇 완벽한 경험들을 즐기는거야.<br>
+                                        기회 하나가 사라지면, 다른 기회가 열린대요<br>
+                                        와, 일하러 가지 않으니까, 세상에 아름다운 것이 너무 많아.<br>
+                                        우리가 진정으로 소유하는 것은 시간 뿐이다.
+                                        가진 것이 달리 아무것도 없는 이 에게도 시간은 있다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>결제 기능썰비스 &copy; 스루빙</p>
+    </footer>
+</body>
+</html>
