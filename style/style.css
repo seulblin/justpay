@@ -611,6 +611,9 @@ button[type="submit"].btn-login{ height: 60px; margin-top: 20px;}
 @media (max-width: 425px){
     .innner-signUp{ padding: 40px 15px;}
     [class^="innner-"] > .title{ font-size: 24px;}
-    .input-box{ padding: 0 20px;}
-    .terms{padding: 20px 20px 0;}
+    .input-box{ padding: 0px;}
+    .terms{padding:20px 0;}
+    [class^="wrap-"]{
+        padding: 150px 0 0;
+    }
 }
