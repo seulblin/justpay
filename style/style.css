@@ -129,6 +129,7 @@ footer > p{
 .input-box{ padding: 0 40px;}
 .input-box > input{
     min-width: 100%;
+    width:100%;
     display: flex;
     margin: 0 auto;
     justify-content: center;
