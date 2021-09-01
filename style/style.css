@@ -171,6 +171,15 @@ button[type="submit"]{
     cursor: pointer;
     font-size: 16px;
 }
+[value="joinGo"]{
+    width: 100%;
+    border: 1px solid rgb(29, 149, 230);
+    background-color: rgb(29, 149, 230);
+    color: #fff;
+    height: 62px;
+    cursor: pointer;
+    font-size: 16px;
+}
 input[type="password"]{ color: #000 !important;} 
 .discord{
      border: 1px solid red !important; 
@@ -383,6 +392,91 @@ input[type="password"]{ color: #000 !important;}
 footer.fot{
     margin-top: 0;
 }
+/*로그인*/
+.input-box > input{ height: 60px; font-size: 18px;}
+.id_save > label{ margin-left: 5px; cursor: pointer;}
+.id_save{ margin-top: 10px;}
+button[type="submit"].btn-login{ height: 60px; margin-top: 20px;}
+[class^="list-"]{
+    display: flex;
+    margin: 25px 0 35px;
+    align-items: center;
+    justify-content: center;
+}
+[class^="list-"] li a{ display: block; color: #000;}
+[class^="list-"] li + *{
+    position: relative;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.list-find li + *::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 12px;
+    border-left: 1px solid #aaa;
+}
+.login_img{ 
+    background: #0b1f31; 
+    display: flex;
+    justify-content: center;
+}
+.login_img > img{
+    width: 350px;
+
+}
+.login_txt > p{
+    font-size: 16px;
+    padding: 20px 0 10px;
+}
+.another-login{
+    position: relative;
+    display: flex;
+    margin-bottom: 25px;
+    align-items: center;
+    color: #0082fc;
+}
+.another-login::before{
+    content: '';
+    display: inline-block;
+    width: 35%;
+    margin-right: 16px;
+    border-bottom: 1px solid #ddd;
+}
+.another-login::after{
+    content: '';
+    display: inline-block;
+    width: 35%;
+    margin-left: 16px;
+    border-bottom: 1px solid #ddd;
+}
+[class$="sns"] > li{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+[class$="sns"] > li> a{
+    color: #fff;
+    font-size: 10px;
+    display: block;
+}
+[class$="sns"] > li:first-of-type {
+    border: 1px solid orange;
+    background:orange;
+}
+[class$="sns"] > li:last-of-type {
+    border: 1px solid rgb(25, 104, 207);
+    background: rgb(25, 104, 207);
+}
+
+
 @media (max-width: 1024px){
     [class$="pc"]{ display: none;}
     [class$="mobile"]{ display: block;}

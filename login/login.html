@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제 | 로그인</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/js.js"></script></title>
+</head>
+<body>
+    <!--[로그인]
+        입력 : 아이디(이메일주소), 비밀번호 / 아이디찾기, 비밀번호 찾기, 회원가입
+        기능1 : value값에 입력된 아이디, 비밀번호 외 다른 것 입력 시 알럿
+        기능2 : 반응형
+        기능3 : 아이디 저장 체크박스
+    -->
+    <div class="container">
+        <header class="header-pc">
+            <h1 class="logo"><a href="#">Just 결제</a></h1>
+            <div class="payment-nav">
+                <ul>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">상세페이지</a></li>
+                    <li><a href="#">기능페이지</a></li>
+                </ul>
+            </div>
+            <div class="payment-user">
+                <button type="button" onclick="location.href='../join/sign-up.html'">회원가입</button>
+                <button type="button">로그인</button>
+            </div>
+        </header>
+        <!--모바일 네비게이션-->
+        <div class="head-mobile">
+            <div class="header-wrap">
+                <h1 class="logo"><a href="#">Just 결제</a></h1>
+            </div>
+            <div class="mobile-bur">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="mobile-container">
+                <div class="mobile-close">
+                    <span></span><span></span>
+                </div>
+                <h1 class="logom"><a href="#">Just 결제</a></h1>
+                <div class="paymentm-nav">
+                    <ul>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">상세페이지</a></li>
+                        <li><a href="#">기능페이지</a></li>
+                    </ul>
+                </div>
+                <div class="paymentm2-user">
+                    <button type="button" onclick="location.href='../join/sign-up.html'">회원가입</button>
+                    <button type="button">로그인</button>
+                </div>
+            </div>
+            <div class="mobile-conBg"></div>
+        </div>
+        <div class="wrap-signUp">
+            <div class="innner-signUp">
+                <h1 class="title">입장할까요?</h1>
+                <form class="box-signUp">
+                    <div class="input-box" id="input_forme">
+                        <input type="text" class="login_id" id="id_one123" value="one123" placeholder="아이디(이메일 주소)" required>
+                        <input type="password" class="login_pw" id="pass_pass999" value="pass999" placeholder="비밀번호" required>   
+                        <p class="id_save"><input type="checkbox" id="id_save"><label for="id_save">아이디 저장</label></p> 
+                        <button type="submit" id="login_btn" class="btn-login blueBack">로그인</button>   
+                        <ul class="list-find">
+                            <li><a href="#">아이디 찾기</a></li>
+                            <li><a href="#">비밀번호 찾기</a></li>
+                        </ul>
+                        <div class="another-login">SNS 간편 로그인</div>
+                        <ul class="list-sns">
+                            <li><a href="#">카톡</a></li>
+                            <li><a href="#">페북</a></li>
+                        </ul>
+                    </div>
+                    <script>
+                        //로그인 구현
+                        var loginClick = document.getElementById('login_btn');
+
+                        loginClick.addEventListener('click',function(){
+                            var ID = document.getElementById('id_one123').value;
+                            var pass = document.getElementById('pass_pass999').value;
+                            if (ID === "one123" && pass === "pass999") {
+                                alert("어서오세요 :D");
+                            }
+                            else {
+                                alert("회원이 아닙니다 :(");
+                            }
+                        });
+                    </script>
+                    <div>
+                        <div class="terms">
+                            <div class="terms_inner">
+                                <div class="login_img"><img src="../img/login.png"></div>
+                                <div class="login_txt">
+                                    <p>회원가입을 하고 <b>다양한 혜택</b>을 누려보세요!</p>
+                                </div>
+                            </div>
+                            <button type="button" value="joinGo" onclick="location.href='../join/sign-up.html'">회원가입 하러!</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>결제 기능썰비스 &copy; 스루빙</p>
+    </footer> 
+</body>
+</html>

@@ -81,3 +81,4 @@ function agree(){
             alert('필수 체크박스를 선택해주세요')
     }
 }
+
