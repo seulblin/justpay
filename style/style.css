@@ -603,10 +603,12 @@ button[type="submit"].btn-login{ height: 60px; margin-top: 20px;}
         width: 80%;
         
     }
+    .terms.logBgs{ padding: 50px 0 0;}
 }
 @media (max-width: 625px){
     .innner-signUp{ padding: 70px 25px;}
     [class^="innner-"] > .title{ font-size: 24px;}
+    .login_img > img{ width:280px;}
 }
 @media (max-width: 425px){
     .innner-signUp{ padding: 40px 15px;}
@@ -616,4 +618,5 @@ button[type="submit"].btn-login{ height: 60px; margin-top: 20px;}
     [class^="wrap-"]{
         padding: 150px 0 0;
     }
+    .login_img > img{ width:240px;}
 }
