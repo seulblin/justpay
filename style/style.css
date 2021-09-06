@@ -683,6 +683,9 @@ button[type="submit"].btn-login{ height: 60px; margin-top: 20px;}
         
     }
     .terms.logBgs{ padding: 50px 0 0;}
+    .another-login{justify-content: center;}
+    .another-login::before{ width:15%;}
+    .another-login::after{ width:15%;}
 }
 @media (max-width: 710px){
     [class^="find-"]{
@@ -710,16 +713,20 @@ button[type="submit"].btn-login{ height: 60px; margin-top: 20px;}
     [class^="wrap-"]{
         padding: 150px 0 0;
     }
+    [class^="list-"] li a {
+        font-size:14px;
+    }
     .login_img > img{ width:240px;}
     .idfind_nav > li > a{
         font-size: 14px;
         padding: 8px;
     }
-    .tab-content> div > form > div > input::placeholder{
+    .input-box > input{ font-size:14px;}
+    input::placeholder{
         font-size:13px;
- 
     }
     [class^="find-"]{
         padding: 20px 15px;
     }
+    .input-box{ padding: 0 15px;}
 }
