@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>결제 | 아이디찾기</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/js.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
     <!--[아이디찾기]
@@ -62,15 +65,49 @@
             <div class="innner-signUp">
                 <h1 class="title">아이디 찾기</h1>
                 <div class="find-id">
-                    <ul class="idfind_nav">
-                        <li><a href="#" class="active">아이디찾기</a></li>
-                        <li><a href="#">이메일로찾기</a></li>
+                    <ul class="idfind_nav" role="tablist">
+                        <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">아이디찾기</a></li>
+                        <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">이메일로찾기</a></li>
                     </ul>
-                    <form>
-                        <div><input type="text" placeholder="이름" required></div>
-                        <div><input type="text" placeholder="휴대폰 번호(ex. 01012345678)"required></div>
-                        <div><button type="submit">확인</button></div>
-                    </form>
+                    <div class="tab-content">
+                        <div role="tabpanel" id="tab1" class="tab-pane active">
+                            <form>
+                                <div><input type="text" placeholder="이름" required></div>
+                                <div><input type="text" placeholder="휴대폰 번호(ex. 01012345678)"required></div>
+                                <div><button type="submit">확인</button></div>
+                            </form>
+                        </div>
+                        
+                        <div role="tabpanel" id="tab2" class="tab-pane">
+                            <form>
+                                <div><input type="text" placeholder="이름" required></div>
+                                <div>
+                                    <div class="email_box"><input type="text" placeholder="이메일 주소"required></div>
+                                    <div class="email_box">
+                                     <input type="text" name="str_email02" id="str_email02" style="width:100px;" disabled value="@naver.com">
+                                     <select style="width:100px;margin-right:10px" name="selectEmail" id="selectEmail"> 
+                                        <option value="1">직접입력</option> 
+                                        <option value="@naver.com" selected>@naver.com</option> 
+                                        <option value="@hanmail.net">@hanmail.net</option> 
+                                        <option value="@hotmail.com">@hotmail.com</option> 
+                                        <option value="@nate.com">@nate.com</option> 
+                                        <option value="@yahoo.co.kr">@yahoo.co.kr</option> 
+                                        <option value="@empas.com">@empas.com</option> 
+                                        <option value="@dreamwiz.com">@dreamwiz.com</option> 
+                                        <option value="@freechal.com">@freechal.com</option> 
+                                        <option value="@lycos.co.kr">@lycos.co.kr</option> 
+                                        <option value="@korea.com">@korea.com</option> 
+                                        <option value="@gmail.com">@gmail.com</option> 
+                                        <option value="@hanmir.com">@hanmir.com</option> 
+                                        <option value="@paran.com">@paran.com</option> 
+                                     </select>
+                                    </div>
+    
+                                </div>
+                                <div><button type="submit">확인</button></div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
