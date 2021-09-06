@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>결제 | 로그인</title>
+    <title>결제 | 아이디찾기</title>
     <link rel="stylesheet" href="../style/style.css">
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/js.js"></script>
 </head>
 <body>
-    <!--[로그인]
+    <!--[아이디찾기]
         입력 : 아이디(이메일주소), 비밀번호 / 아이디찾기, 비밀번호 찾기, 회원가입
         기능1 : value값에 입력된 아이디, 비밀번호 외 다른 것 입력 시 알럿
         기능2 : 반응형
@@ -60,57 +60,21 @@
         </div>
         <div class="wrap-signUp">
             <div class="innner-signUp">
-                <h1 class="title">입장할까요?</h1>
-                <form class="box-signUp">
-                    <div class="input-box" id="input_forme">
-                        <input type="text" class="login_id" id="id_one123" value="one123" placeholder="아이디(이메일 주소)" required>
-                        <input type="password" class="login_pw" id="pass_pass999" value="pass999" placeholder="비밀번호" required>   
-                        <p class="id_save"><input type="checkbox" id="id_save"><label for="id_save">아이디 저장</label></p> 
-                        <button type="submit" id="login_btn" class="btn-login blueBack">로그인</button>   
-                        <ul class="list-find">
-                            <li><a href="find_id.html">아이디 찾기</a></li>
-                            <li><a href="#">비밀번호 찾기</a></li>
-                        </ul>
-                        <div class="another-login">SNS 간편 로그인</div>
-                        <ul class="list-sns">
-                            <li><a href="#">카톡</a></li>
-                            <li><a href="#">페북</a></li>
-                        </ul>
-                    </div>
-                    <script>
-                        //로그인 구현
-                        var loginClick = document.getElementById('login_btn');
-
-                        loginClick.addEventListener('click',function(){
-                            var ID = document.getElementById('id_one123').value;
-                            var pass = document.getElementById('pass_pass999').value;
-                            if (ID === "one123" && pass === "pass999") {
-                                alert("어서오세요 :D");
-                            }
-                            else {
-                                alert("회원이 아닙니다 :(");
-                            }
-                        });
-                    </script>
-                    <div>
-                        <div class="terms logBgs">
-                            <div class="terms_inner">
-                                <div class="login_img"><img src="../img/login.png"></div>
-                                <div class="login_txt">
-                                    <p>회원가입을 하고 <b>다양한 혜택</b>을 누려보세요!</p>
-                                </div>
-                            </div>
-                            <button type="button" value="joinGo" onclick="location.href='../join/sign-up.html'">회원가입 하러!</button>
-                        </div>
-                        
+                <h1 class="title">아이디 찾기</h1>
+                <div class="find-id">
+                    <ul class="idfind_nav">
+                        <li><a href="#" class="active">아이디찾기</a></li>
+                        <li><a href="#">이메일로찾기</a></li>
+                    </ul>
+                    <form>
+                        <div><input type="text" placeholder="이름" required></div>
+                        <div><input type="text" placeholder="휴대폰 번호(ex. 01012345678)"required></div>
+                        <div><button type="submit">확인</button></div>
                     </form>
                 </div>
             </div>
         </div>
-
-
-
-
+    </div>
     <footer>
         <p>결제 기능썰비스 &copy; 스루빙</p>
     </footer> 
