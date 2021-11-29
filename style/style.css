@@ -8,6 +8,7 @@
 *,*::before,*::after{box-sizing:border-box;}
 ul,li{ list-style: none;}
 a{ text-decoration: none;}
+.h1, .h2, .h3, h1, h2, h3 {margin-top: 0px !important;margin-bottom: 0px !important;}
 input{outline: none;}
 html{
     width: 100%;
@@ -557,6 +558,178 @@ button[type="submit"].btn-login{ height: 60px; margin-top: 20px;}
 .tab-content> div > form > div > input::placeholder{
     font-size:16px;
 }
+
+
+/*비밀번호 찾기*/
+.member_type{
+    width:100%;
+}
+.member_type > select{
+    width: 100%;
+    height: 60px;
+    border: 1px solid #ddd;
+    outline: 0;
+    padding: 0 10px;
+}
+.member_type > select > option[value="1"]{ color: #ddd;}
+/* .member_type > select {
+    -webkit-appearance:none; 
+    -moz-appearance:none; 
+    appearance:none;
+ }
+ 
+.member_type > select::-ms-expand{
+    display:none;
+ } */
+ 
+/*달력*/
+.innner-calendar{
+    padding: 0;
+    max-width:1200px;
+    margin: 0 auto;
+}
+.rap {
+    width: 100%;
+    margin: 60px auto;
+  }
+  
+  .date_head {
+    margin-bottom: 10px;
+  }
+  
+  .date_head > div {
+    background: #02519c;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .date_form {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 3px;
+  }
+  
+  .date_form > div {
+    width: 160px;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .dateSel > div {
+    font-weight: bold;
+    color: #333;
+    min-height: 150px;
+    padding: 16px 20px;
+    border-radius: 10px;
+    border: 1px solid #f7f7f7;
+  }
+  
+  .background {
+    background: #f7f7f7;
+  }
+
+
+/*탭 안에 슬라이드*/
+.outer{
+    padding-top: 150px;
+    width: 100%;
+    height: 100vh;
+}
+.outer > .buttons{
+    display: table;
+    margin: 0 auto;
+
+}
+.outer > .buttons > button:nth-of-type(2){
+    margin-left: -1px;
+    margin-right: -1px;
+}
+.tabs {
+    padding-top:50px;
+}
+
+.tab {
+    display:none;
+}
+
+.tab.active {
+    display:block;
+}
+
+button {
+    width:150px;
+    height:30px;
+    font-size:16px;
+    display:inline-block;
+    color:#000;
+    background-color: #fff;
+    border: 1px solid rgb(6, 127, 240);
+
+}
+
+button.active {
+    background-color:rgb(6, 127, 240);
+    color: #fff;
+}
+
+.slider {
+    width:100%;
+    height:400px;
+}
+
+.item {
+    height:400px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 0px solid #000;
+    position: relative;
+}
+.item > .itemBox{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#slider-box{ overflow:hidden;}
+#slider-box > ul > li{
+    float: left;
+    width: 250px;
+    height: 250px;
+    
+    background: gold;
+}
+#slider-box > ul > li:nth-last-of-type(2n){
+    background: #0082fc;
+}
+
+
+#slider-box{
+    height: 60px;
+    width:100%;
+    position: absolute;
+    overflow: hidden;
+}
+#slider-box > ul > li{
+    height: 45px;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*반응형 시작*/
 @media (max-width: 1024px){
     [class$="pc"]{ display: none;}
     [class$="mobile"]{ display: block;}
@@ -730,3 +903,338 @@ button[type="submit"].btn-login{ height: 60px; margin-top: 20px;}
     }
     .input-box{ padding: 0 15px;}
 }
+
+
+/*달력*/
+.calendarWrap{
+    width:100%;
+    height:100%;
+    margin: 0 auto;
+    background: #829db4;
+    padding: 15px;
+    display: block;
+}
+.calendarWrap > .calendar-date{
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    background: #fff;
+}
+.calendarWrap > .calendar-date > .date-wrap{
+    padding: 15px;
+}
+.calendarWrap > .calendar-date > .date-wrap > ul > li{
+    display: inline-block;
+}
+.calendarWrap > .calendar-date > .date-wrap > ul > li > a{
+    display: block;
+    padding: 3px 5px;
+    color: #0a2944;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 14px;
+    width: 70px;
+}
+.calendarWrap > .calendar-date > .date-wrap > ul > li.active > a{
+    background-color: #0a2944;
+    color: #fff;
+}
+.calendarWrap > .calendar-date > .date-search{
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.calendarWrap > .calendar-date > .date-search > input{
+    padding:7px 15px;
+    outline: 0;
+    border: 1px solid #ddd;
+    width: 250px;
+    height: auto;
+    border-radius: 30px;
+    font-size: 12px;
+}
+.calendar-box{ 
+    width: 100%;
+    display: flex;
+}
+.calendar-box > [class^="cdInner-"]{
+    padding: 5px;
+    background: #fff;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.calendar-box > [class^="cdInner-"][class$="sm"]{
+    width: 30%;
+}
+.calendar-box > [class^="cdInner-"][class$="lg"]{
+    width: 70%;
+    border-left: 1px solid #ddd;
+}
+
+.cdMini > table{
+    width: 100%;
+}
+.cdMini > table caption{
+    padding: 15px 0;
+}
+.cdMini > table caption > a{
+    color: #333;
+    display: inline-block;
+}
+.cdMini > table caption > a.cdMini-prev{
+    width: 14px;
+    height: 14px;
+    background: #333;
+    border-radius:100%;
+    color: #fff;
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    line-height: 14px;
+}
+
+.cdMini > table caption > a.cdMini-next{
+    width: 14px;
+    height: 14px;
+    background: #333;
+    border-radius:100%;
+    color: #fff;
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    line-height: 14px;
+}
+.cdMini > table th{
+    font-size:13px;
+    color: #333;
+}
+.cdMini > table td{
+    text-align: center;
+}
+.cdMini > table th:first-of-type{
+    color: #c72d2d;
+}
+.cdMini > table th:last-of-type{
+    color: #2d5ec7;
+}
+.cdChoice{
+    padding:25px;
+}
+.cdChoice > h1{
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+button.cdChoice-btn{
+    width:100%;
+    display: block;
+    border-radius: 50px;
+    margin-top: 15px;
+    height: 50px;
+    border: 1px solid #ddd;
+    opacity: 0.5;
+    cursor: pointer;
+}
+button.cdChoice-btn.active{
+    opacity:1;
+    background: #3d5163;
+}
+.cdLarge > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.cdLarge tr > th{
+    font-size: 14px;
+    color: #a5a5a5;
+    padding: 7px 0;
+    border: 1px solid #ddd;
+    background: #eee;
+    font-weight: normal;
+}
+.cdLarge tr > td {
+    height: 100px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    position: relative;
+}
+.cdLarge tr > td > span{
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background: #fff;
+}
+.cdContent{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 35px 10px 10px;
+}
+.cdContent > .cdContentInner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.cdTable {
+    width:500px;
+    height: auto;
+    padding: 7px;
+    position: absolute;
+    z-index: 50;
+    background: #0a2944;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.cdTable-title{
+    position: relative;
+}
+.cdTable-title > h1{
+    font-size: 16px;
+    display: inline-block;
+    color: #fff;
+    padding: 4px;
+}
+.cdTable-title > .cdTable-closed{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    line-height: 15px;
+    display: inline-block;
+    text-align: center;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.cdTable-inputBox > div{
+    position: relative;
+    margin-top: 10px;
+}
+.cdTable-inputBox > div > button{
+    position: absolute;
+    padding: 4px;
+    background: #0a2944;
+    color: #fff;
+    border: 0px;
+    outline: 0;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.cdTable-inputBox > div > input{
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #999;
+    outline: 0;
+}
+.cdTable-info{
+    padding: 40px 0 0px;
+    font-size: 13px;
+}
+.color-gold{
+    color: gold;
+}
+.cdTable-checkbox > div{
+    width: 100%;
+}
+.cdTable-checkbox > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+}
+.cdTable-checkbox > div > input{
+    padding: 7px;
+}
+.cdTable-checkbox > div > input[type="text"]{
+    flex: 1;
+    margin-left: 10px;
+}
+.cdTable-checkbox > div > input[type="checkbox"]:checked {
+    background: #2aa1c0;
+}
+.cdTable-label .css-checkbox{
+    display: none;
+}
+.cdTable-label .css-checkbox:checked + i{
+    background: transparent;
+    border:2px solid #fff;
+}
+.cdTable-label .css-checkbox:checked + i:after{
+    opacity: 1;
+    border-color: #fff;
+}
+.cdTable-label .css-checkbox + i {
+    position: relative;
+    display: inline-block;
+    top: -1px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    vertical-align: bottom;
+    border: 1px solid #999;
+    transition: background 200ms ease;
+    border-radius: 10em;
+    border:2px solid #fff;
+    background: transparent;
+    font-size: 330px;
+    cursor: pointer;
+}
+.cdTable-label .css-checkbox + i:after {
+    content: "";
+    opacity: 0;
+    transform: translateZ(1px) rotate(-45deg);
+    outline: 1px solid transparent;
+    position: absolute;
+    top: 22%;
+    left: 15%;
+    width: 15px;
+    height: 6px; 
+    border: 3px solid #222;
+    border-top: none;
+    border-right: none;
+    background: rgba(0, 0, 0, 0);
+}
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+  }
+  
+  .filebox label {
+    display: inline-block;
+    padding: 4px 7px;
+    color: #0a2944;
+    vertical-align: middle;
+    background-color: #fafafa;
+    cursor: pointer;
+    border: 1px solid #fff;
+    font-size: 14px;
+  }
+  .filebox .upload-name {
+    display: inline-block;
+    height: 30px;
+    font-size:14px; 
+    padding: 0 10px;
+    vertical-align: middle;
+    background-color: #0a2944;
+    border: 0px solid #fff;
+    border-radius: 0px;
+    color: #fff;
+    width: 82%;
+    border-bottom: 1px solid #fff;
+  }

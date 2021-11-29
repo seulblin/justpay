@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달력</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="calendarWrap">
+        <div class="calendar-date">
+            <div class="date-wrap">
+                <ul>
+                    <li><a href="#">일간</a></li>
+                    <li><a href="#">주간</a></li>
+                    <li class="active"><a href="#">월간</a></li>
+                    <li><a href="#">기간설정</a></li>
+                </ul>
+            </div>
+            <div class="date-search">
+                <input type="text" placeholder="검색">
+            </div>
+        </div>
+        <div class="calendar-box">
+            <div class="cdInner-sm">
+                <div class="cdMini">
+                    <table>
+                        <caption>
+                            <a href="#" class="cdMini-prev"><</a>
+                            <a href="#" class="cdMini-day">2021년 10월</a>
+                            <a href="#" class="cdMini-next">></a>
+                        </caption>
+                        <tr>
+                            <th>일</th>
+                            <th>월</th>
+                            <th>화</th>
+                            <th>수</th>
+                            <th>목</th>
+                            <th>금</th>
+                            <th>토</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cdChoice">
+                    <h1>달력설정</h1>
+                    <button class="cdChoice-btn">내 일정보기</button>
+                    <button class="cdChoice-btn">휴무보기</button>
+                    <button class="cdChoice-btn active">모두보기</button>
+                </div>
+            </div>
+            <div class="cdInner-lg">
+                <div class="cdLarge">
+
+                    <table>
+                        <tr>
+                            <th>일요일</th>
+                            <th>월요일</th>
+                            <th>화요일</th>
+                            <th>수요일</th>
+                            <th>목요일</th>
+                            <th>금요일</th>
+                            <th>토요일</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><span>1</span></td>
+                            <td><span>2</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>3</span></td>
+                            <td><span>4</span></td>
+                            <td><span>5</span></td>
+                            <td><span>6</span></td>
+                            <td><span>7</span></td>
+                            <td><span>8</span></td>
+                            <td><span>9</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>10</span></td>
+                            <td><span>11</span></td>
+                            <td><span>12</span>
+                             <div class="cdContent">
+                                 <div class="cdContentInner">
+                                    <div class="cdTable">
+                                        <div class="cdTable-title"><h1>일정등록</h1><span class="cdTable-closed">X</span></div>
+                                        <div class="cdTable-inputBox">
+                                            <div><input type="date" placeholder="미팅일자"></div>
+                                            <div><input type="time" placeholder="미팅시간"></div>
+                                            <div><input type="text" placeholder="미팅 학원명"></div>
+                                            <div><input type="text" placeholder="주소"><button>주소찾기</button></div>
+                                        </div>
+                                        <div class="cdTable-inputBox">
+                                            <p class="cdTable-info color-gold">* 미팅 학원 연락처 (리스트에 노출될 대표연락처를 체크해주세요)</p>
+                                            <div class="cdTable-checkbox">
+                                                <div>
+                                                    <label class="cdTable-label"><input type="checkbox" name="check01" id="check01" class="css-checkbox"><i></i></label>
+                                                    <input type="text" placeholder="담당자">
+                                                    <input type="text" placeholder="연락처">
+                                                </div>
+                                                <div>
+                                                    <label class="cdTable-label"><input type="checkbox" name="check01" id="check01" class="css-checkbox"><i></i></label>
+                                                    <input type="text" placeholder="담당자">
+                                                    <input type="text" placeholder="연락처">
+                                                </div>
+                                                <div>
+                                                    <label class="cdTable-label"><input type="checkbox" name="check01" id="check01" class="css-checkbox"><i></i></label>
+                                                    <input type="text" placeholder="담당자">
+                                                    <input type="text" placeholder="연락처">
+                                                </div>
+                                            </div>
+                                            <div class="filebox" style="margin-top: 35px;"> 
+                                                <label for="file">이미지 추가</label> 
+                                                <input type="file" id="file">
+                                              </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                             </div>
+                            </td>
+                            <td><span>13</span></td>
+                            <td><span>14</span></td>
+                            <td><span>15</span></td>
+                            <td><span>16</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>17</span></td>
+                            <td><span>18</span></td>
+                            <td><span>19</span></td>
+                            <td><span>20</span></td>
+                            <td><span>21</span></td>
+                            <td><span>22</span></td>
+                            <td><span>23</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>24</span></td>
+                            <td><span>25</span></td>
+                            <td><span>26</span></td>
+                            <td><span>27</span></td>
+                            <td><span>28</span></td>
+                            <td><span>29</span></td>
+                            <td><span>30</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>31</span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
